@@ -633,4 +633,20 @@
     <!-- End of bodyEnd -->
 </body>
 </html>
-
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const badge = document.getElementById("__framer-badge-container");
+    if (badge) badge.remove();
+});
+</script>
+<script>
+setInterval(() => {
+    document.querySelectorAll(
+        'button, div, a'
+    ).forEach(el => {
+        if (el.innerText?.includes("Edit Content")) {
+            el.remove();
+        }
+    });
+}, 1000);
+</script>
